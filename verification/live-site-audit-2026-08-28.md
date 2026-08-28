@@ -10,7 +10,7 @@
 | Environment | Public production website |
 | Browser | Safari, Private Browsing mode |
 | Related issue | #1 |
-| Status | In progress |
+| Status | Completed — remediation required |
 
 ## Purpose
 
@@ -329,6 +329,17 @@ The “See all 26 assessments” control does not present a catalogue of all 26 
 **Priority:** Medium
 
 **Remediation:** Pending confirmation of the intended destination.
+Further testing identified a third product-count statement in the authenticated onboarding journey: “28+ payment infrastructure assessments”.
+
+The product currently presents three different inventory descriptions:
+
+- 25 modules on the public homepage.
+- 26 assessments on the public homepage.
+- 28+ assessments in the authenticated onboarding journey.
+
+This inconsistency prevents customers and documentation users from determining the authoritative number of available assessments. An authoritative assessment inventory must be established before the public website, authenticated onboarding journey and documentation can be made consistent.
+
+The authenticated screenshot containing the 28+ statement is retained privately because it also contains personal account information. It must not be added to the public documentation repository without redaction.
 
 
 ## Documentation changes required
@@ -349,10 +360,10 @@ To be determined after testing.
 
 ## Completion criteria
 
-- [ ] All six checks have been performed.
-- [ ] Every check has a dated actual result.
-- [ ] Pass, fail, blocked or pending status is recorded accurately.
-- [ ] Evidence is referenced where appropriate.
-- [ ] Documentation corrections are committed separately.
-- [ ] Product defects are recorded without being disguised as documentation fixes.
-- [ ] Issue #1 is updated with the audit results.
+- [x] All six checks have been performed.
+- [x] Every check has a dated actual result.
+- [x] Pass, fail, blocked or pending status is recorded accurately.
+- [x] Evidence is referenced where appropriate.
+- [x] Documentation corrections are committed separately.
+- [x] Product defects are recorded without being disguised as documentation fixes.
+- [x] Issue #1 is updated with the audit results.
