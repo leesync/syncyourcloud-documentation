@@ -34,7 +34,7 @@ infrastructure identifiers.
 | ID | Area | Expected result | Actual result | Status | Evidence |
 |---|---|---|---|---|---|
 | SYC-001 | Homepage assessment count | Homepage consistently describes 26 assessments | Three references to 25 modules and two references to 26 assessments were found | Fail | Screenshots captured on 28 August 2026 |
-| SYC-002 | Infrastructure Readiness route | Route displays the Infrastructure Readiness Assessment | Not yet tested | Pending | — |
+| SYC-002 | Infrastructure Readiness route | Route displays the free Infrastructure Readiness Assessment without requiring sign-in | Correct assessment displayed and question 1 of 21 opened without authentication | Pass | Landing-page and assessment screenshots captured on 28 August 2026 |
 | SYC-003 | PCI DSS Gap Analysis route | Route displays the PCI DSS Gap Analysis | Not yet tested | Pending | — |
 | SYC-004 | Published product copy | Pages contain finished customer-facing content only | Not yet tested | Pending | — |
 | SYC-005 | Protected dashboard | Unauthenticated users cannot access protected content | Not yet tested | Pending | — |
@@ -85,11 +85,12 @@ A browser text search found:
 
 **Procedure**
 
-1. Open the URL in a private browser window.
-2. Record the page title and primary heading.
-3. Record the assessment presented.
-4. Compare the route name with the displayed content.
-5. Test whether the primary call-to-action opens the expected journey.
+1. Open the URL in a Safari Private Browsing window.
+2. Record the main heading and assessment description.
+3. Confirm that the page presents an infrastructure-readiness assessment.
+4. Start the assessment using the primary call to action.
+5. Confirm that the first assessment question loads.
+6. Record whether authentication is required.
 
 **Expected result**
 
@@ -97,13 +98,32 @@ The route displays the Infrastructure Readiness Assessment and opens its associa
 
 **Actual result**
 
-Pending manual verification.
+The route displayed the “Payment Sync Score” Infrastructure Readiness Check.
 
-**Status:** Pending
+The landing page described a free public assessment containing 21 questions across seven infrastructure layers:
 
-**Evidence:** Not yet captured.
+- Agent orchestration
+- Security and encryption
+- Compliance and audit
+- Cost optimisation
+- Observability and monitoring
+- Payment gateway integration
+- Disaster recovery
 
-**Required action:** To be determined after testing.
+Starting the assessment successfully opened question 1 of 21. No sign-in was requested, which matches the intended behaviour for this free public assessment.
+
+**Status:** Pass
+
+**Evidence:** Two screenshots captured on 28 August 2026 show the Infrastructure Readiness landing page and question 1 of the free public assessment.
+
+**Required action:** No correction is required. Retain this test as regression evidence for future route or assessment changes.
+**Status:** Pass
+
+**Evidence:** Two screenshots captured on 28 August 2026 show the Infrastructure Readiness landing page and question 1 of the associated assessment.
+
+**Required action:** No immediate product or documentation correction is required. Retain this test as regression evidence for future route or assessment changes.
+
+---
 
 ---
 
