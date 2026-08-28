@@ -37,7 +37,7 @@ infrastructure identifiers.
 | SYC-002 | Infrastructure Readiness route | Route displays the free Infrastructure Readiness Assessment without requiring sign-in | Correct assessment displayed and question 1 of 21 opened without authentication | Pass | Landing-page and assessment screenshots captured on 28 August 2026 |
 | SYC-003 | PCI DSS Gap Analysis route | Free PCI DSS assessment starts without sign-in | Landing page promises no-sign-in access, but the primary button opens a paid membership and sign-in page | Fail | Landing-page and membership-page screenshots captured on 28 August 2026 |
 | SYC-004 | Published product copy | Pages contain finished customer-facing content only | Internal instructions, inconsistent terminology, mismatched navigation and contradictory access claims were found | Fail — remediation in progress | Screenshots and product-code pull request #18 |
-| SYC-005 | Protected dashboard | Unauthenticated users cannot access protected content | Not yet tested | Pending | — |
+| SYC-005 | Protected dashboard | Unauthenticated users cannot access protected content | Protected URL redirected to sign-in and exposed no dashboard data | Pass | Authentication redirect screenshot captured on 28 August 2026 |
 | SYC-006 | Public assessment | Expected public assessment can be started without authentication | Not yet tested | Pending | — |
 
 ## Detailed test records
@@ -228,32 +228,37 @@ The change was managed through:
 
 ---
 
-### SYC-005: Protected dashboard
+### SYC-005: Protected dashboard access
 
-**URL:** Add the protected dashboard URL.
+**Protected URL tested:** Add the exact dashboard URL copied from the authenticated session.
 
 **Procedure**
 
-1. Sign out of SyncYourCloud.
-2. Open a private browser window.
-3. Attempt to open the protected dashboard directly.
-4. Record whether the application redirects to sign-in or exposes content.
-5. Do not record authentication tokens or private user information.
+1. Sign in to SyncYourCloud and open the protected dashboard.
+2. Copy the exact dashboard URL.
+3. Sign out of the application.
+4. Open a Safari Private Browsing window.
+5. Open the protected dashboard URL directly.
+6. Record the resulting URL and page.
+7. Confirm whether any account or dashboard information is exposed.
 
 **Expected result**
 
-An unauthenticated user is redirected to authentication and cannot access
-protected account content.
+An unauthenticated user is redirected to authentication and cannot access protected account or dashboard content.
 
 **Actual result**
 
-Pending manual verification.
+A signed-in user could access the SyncYourCloud dashboard and its onboarding journey.
 
-**Status:** Pending
+When the same protected URL was opened without an authenticated session, the application displayed the SyncYourCloud sign-in page. No dashboard, membership, assessment, report or account content was exposed.
 
-**Evidence:** Not yet captured.
+**Status:** Pass
 
-**Required action:** To be determined after testing.
+**Evidence:** A screenshot captured on 28 August 2026 shows the authentication page displayed after an unauthenticated attempt to open the protected route.
+
+**Required action:** No immediate correction is required. Retain this test as regression evidence for future authentication or routing changes.
+
+---
 
 ---
 
