@@ -8,7 +8,7 @@
 | Test date | 28 August 2026 |
 | Tester | Leesha Chudasama |
 | Environment | Public production website |
-| Browser | Add browser and version |
+| Browser | Safari, Private Browsing mode |
 | Related issue | #1 |
 | Status | In progress |
 
@@ -33,7 +33,7 @@ infrastructure identifiers.
 
 | ID | Area | Expected result | Actual result | Status | Evidence |
 |---|---|---|---|---|---|
-| SYC-001 | Homepage tool count | One consistent tool total is used | Not yet tested | Pending | — |
+| SYC-001 | Homepage assessment count | Homepage consistently describes 26 assessments | Three references to 25 modules and two references to 26 assessments were found | Fail | Screenshots captured on 28 August 2026 |
 | SYC-002 | Infrastructure Readiness route | Route displays the Infrastructure Readiness Assessment | Not yet tested | Pending | — |
 | SYC-003 | PCI DSS Gap Analysis route | Route displays the PCI DSS Gap Analysis | Not yet tested | Pending | — |
 | SYC-004 | Published product copy | Pages contain finished customer-facing content only | Not yet tested | Pending | — |
@@ -44,21 +44,15 @@ infrastructure identifiers.
 
 ### SYC-001: Homepage assessment count
 
----
 
-### SYC-002: Infrastructure Readiness route
+**URL:** https://www.syncyourcloud.io/
 
-**URL:** https://www.syncyourcloud.io/tools/infra-readiness
+**Procedure**
 
+1. Open the homepage in a private browser window.
 2. Search the page for every statement describing the number of assessments or modules.
-
-1. Open the URL in a private browser window.
-2. Record the page title and primary heading.
-3. Record the assessment or tool presented.
-4. Compare the route name with the displayed content.
-5. Test whether the primary call-to-action opens the expected journey.
-
-
+3. Record each number and the section in which it appears.
+4. Compare the statements for consistency.
 
 **Expected result**
 
@@ -82,6 +76,36 @@ A browser text search found:
 **Evidence:** Homepage screenshots captured on 28 August 2026 show three references to 25 modules and two references to 26 assessments.
 
 **Required action:** Replace the three outdated references to “25 modules” with “26 assessments”. Review the updated homepage to confirm that the count and terminology are consistent throughout.
+
+---
+
+### SYC-002: Infrastructure Readiness route
+
+**URL:** https://www.syncyourcloud.io/tools/infra-readiness
+
+**Procedure**
+
+1. Open the URL in a private browser window.
+2. Record the page title and primary heading.
+3. Record the assessment presented.
+4. Compare the route name with the displayed content.
+5. Test whether the primary call-to-action opens the expected journey.
+
+**Expected result**
+
+The route displays the Infrastructure Readiness Assessment and opens its associated journey.
+
+**Actual result**
+
+Pending manual verification.
+
+**Status:** Pending
+
+**Evidence:** Not yet captured.
+
+**Required action:** To be determined after testing.
+
+---
 
 ---
 
@@ -197,9 +221,15 @@ Pending manual verification.
 **Required action:** To be determined after testing.
 
 ## Findings
+### Finding 1: Outdated assessment count and terminology
 
-No findings have been confirmed yet. This section will be updated after the
-manual checks are completed.
+SyncYourCloud now uses “assessments” as its customer-facing term. The current suite contains 26 assessments.
+
+The homepage correctly refers to 26 assessments in two places but retains three outdated references to 25 modules. These legacy references create an inconsistent product count and naming convention.
+
+The three references to “25 modules” should be replaced with “26 assessments”.
+
+
 
 ## Documentation changes required
 
