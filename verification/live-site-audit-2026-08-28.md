@@ -36,7 +36,7 @@ infrastructure identifiers.
 | SYC-001 | Homepage assessment count | Homepage consistently describes 26 assessments | Three references to 25 modules and two references to 26 assessments were found | Fail | Screenshots captured on 28 August 2026 |
 | SYC-002 | Infrastructure Readiness route | Route displays the free Infrastructure Readiness Assessment without requiring sign-in | Correct assessment displayed and question 1 of 21 opened without authentication | Pass | Landing-page and assessment screenshots captured on 28 August 2026 |
 | SYC-003 | PCI DSS Gap Analysis route | Free PCI DSS assessment starts without sign-in | Landing page promises no-sign-in access, but the primary button opens a paid membership and sign-in page | Fail | Landing-page and membership-page screenshots captured on 28 August 2026 |
-| SYC-004 | Published product copy | Pages contain finished customer-facing content only | Not yet tested | Pending | — |
+| SYC-004 | Published product copy | Pages contain finished customer-facing content only | Internal instructions, inconsistent terminology, mismatched navigation and contradictory access claims were found | Fail — remediation in progress | Screenshots and product-code pull request #18 |
 | SYC-005 | Protected dashboard | Unauthenticated users cannot access protected content | Not yet tested | Pending | — |
 | SYC-006 | Public assessment | Expected public assessment can be started without authentication | Not yet tested | Pending | — |
 
@@ -170,28 +170,61 @@ The resulting page asked existing members to sign in. New users were instructed 
 
 ### SYC-004: Published product copy
 
-**URLs tested:** To be added during testing.
+**URLs tested:**
+
+- https://www.syncyourcloud.io/
+- https://www.syncyourcloud.io/tools/infra-readiness
+- https://www.syncyourcloud.io/tools/pci-gap-analysis
 
 **Procedure**
 
 1. Review the homepage and assessment landing pages.
-2. Look for internal instructions, drafting notes and placeholder text.
-3. Check that customer-facing claims are clear and supportable.
-4. Record the exact location of any issue without reproducing sensitive data.
+2. Search for internal instructions, drafting notes and placeholder text.
+3. Check that product counts and terminology are consistent.
+4. Compare button labels with their destinations.
+5. Check that access claims match the actual user journey.
+6. Record confirmed issues using public information only.
 
 **Expected result**
 
-Published pages contain completed customer-facing content only.
+Published pages contain finished customer-facing content only. Product terminology, access claims and navigation labels accurately describe the associated content and journeys.
 
 **Actual result**
 
-Pending manual verification.
+The audit identified four content problems:
 
-**Status:** Pending
+1. The homepage used both “25 modules” and “26 assessments”.
+2. “See all 26 assessments” did not display a catalogue of all 26 assessments.
+3. The “How It Works” section exposed internal editorial instructions about animations, visuals, framing and messaging.
+4. The PCI DSS Gap Analysis page promised free, no-sign-in access but directed users to authentication and paid membership.
 
-**Evidence:** Not yet captured.
+**Status:** Fail — remediation and retesting in progress
 
-**Required action:** To be determined after testing.
+**Evidence:** Screenshots captured on 28 August 2026 show the conflicting assessment count, mismatched navigation, internal editorial instructions and contradictory PCI DSS access journey.
+
+**Remediation completed in source control:**
+
+The public-facing product-tour copy was rewritten in `ProductTour.jsx`. The correction replaced internal editorial instructions with customer-focused explanations of assessment inputs, findings, decision support and remediation planning.
+
+The change was managed through:
+
+- Branch: `fix/product-tour-customer-copy`
+- Commits:
+  - `fix: replace internal product tour copy`
+  - `fix: remove duplicate product tour copy`
+- Pull request: [Replace internal product-tour instructions with customer-facing copy](https://github.com/leesync/dashboard-webtools/pull/18)
+- Files changed: One
+- Merge target: `main`
+
+**Retest status:** Pending completion of the AWS Amplify deployment.
+
+**Remaining actions:**
+
+- Verify the corrected product-tour copy after deployment.
+- Replace “25 modules” with “26 assessments”.
+- Correct or rename “See all 26 assessments”.
+- Resolve the PCI DSS free-access and membership contradiction.
+- Repeat SYC-004 after every correction is deployed.
 
 ---
 
@@ -271,6 +304,23 @@ This prevents users from accessing the assessment under the conditions advertise
 
 **Recommended resolution:** Either provide direct anonymous access to the assessment or replace the free-access claims with accurate membership and payment information.
 
+### Finding 3: Internal editorial instructions were publicly visible
+
+The homepage product tour contained instructions about retaining animations, changing framing and repositioning messages. This copy addressed the page editor rather than the customer.
+
+**Priority:** High
+
+**Remediation:** Replaced the internal instructions with customer-facing explanations through product-code pull request #18.
+
+**Verification:** Pending deployment and production retest.
+
+### Finding 4: Assessment navigation does not match its label
+
+The “See all 26 assessments” control does not present a catalogue of all 26 assessments.
+
+**Priority:** Medium
+
+**Remediation:** Pending confirmation of the intended destination.
 
 
 ## Documentation changes required
