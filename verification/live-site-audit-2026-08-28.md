@@ -35,7 +35,7 @@ infrastructure identifiers.
 |---|---|---|---|---|---|
 | SYC-001 | Homepage assessment count | Homepage consistently describes 26 assessments | Three references to 25 modules and two references to 26 assessments were found | Fail | Screenshots captured on 28 August 2026 |
 | SYC-002 | Infrastructure Readiness route | Route displays the free Infrastructure Readiness Assessment without requiring sign-in | Correct assessment displayed and question 1 of 21 opened without authentication | Pass | Landing-page and assessment screenshots captured on 28 August 2026 |
-| SYC-003 | PCI DSS Gap Analysis route | Route displays the PCI DSS Gap Analysis | Not yet tested | Pending | — |
+| SYC-003 | PCI DSS Gap Analysis route | Free PCI DSS assessment starts without sign-in | Landing page promises no-sign-in access, but the primary button opens a paid membership and sign-in page | Fail | Landing-page and membership-page screenshots captured on 28 August 2026 |
 | SYC-004 | Published product copy | Pages contain finished customer-facing content only | Not yet tested | Pending | — |
 | SYC-005 | Protected dashboard | Unauthenticated users cannot access protected content | Not yet tested | Pending | — |
 | SYC-006 | Public assessment | Expected public assessment can be started without authentication | Not yet tested | Pending | — |
@@ -127,34 +127,44 @@ Starting the assessment successfully opened question 1 of 21. No sign-in was req
 
 ---
 
----
-
 ### SYC-003: PCI DSS Gap Analysis route
 
 **URL:** https://www.syncyourcloud.io/tools/pci-gap-analysis
 
 **Procedure**
 
-1. Open the URL in a private browser window.
-2. Record the page title and primary heading.
-3. Confirm that the page describes the PCI DSS Gap Analysis.
-4. Test the primary call-to-action.
-5. Record whether authentication is required.
+1. Open the URL in a Safari Private Browsing window.
+2. Confirm that the landing page describes the PCI DSS Gap Analysis.
+3. Record the access statements displayed on the landing page.
+4. Select the primary “Try It Free – No Sign-in” call to action.
+5. Confirm whether the assessment opens without authentication or payment.
+6. Record the resulting page and access requirements.
 
 **Expected result**
 
-The route displays the PCI DSS Gap Analysis and opens the correct assessment
-journey.
+The route displays the PCI DSS Gap Analysis and allows users to start the free assessment without signing in.
 
 **Actual result**
 
-Pending manual verification.
+The PCI DSS Gap Analysis landing page loaded successfully and described the assessment as free and accessible without signing in.
 
-**Status:** Pending
+The page displayed the following access statements:
 
-**Evidence:** Not yet captured.
+- “FREE – NO SIGN-IN REQUIRED”
+- “Free, 15 minutes, no account needed”
+- “Try It Free – No Sign-in”
 
-**Required action:** To be determined after testing.
+After selecting “Try It Free – No Sign-in”, the user was taken to a membership page instead of the assessment.
+
+The resulting page asked existing members to sign in. New users were instructed to sign up and pay to activate membership. The PCI DSS assessment could not be started anonymously as promised on the landing page.
+
+**Status:** Fail
+
+**Evidence:** Two screenshots captured on 28 August 2026 show the no-sign-in promise on the PCI DSS Gap Analysis landing page and the membership page displayed after selecting the primary call to action.
+
+**Required action:** Decide whether the PCI DSS Gap Analysis is a free public assessment or a members-only assessment. If it is public, correct the call-to-action destination so the assessment opens without authentication. If membership is required, remove the “free” and “no sign-in” claims and clearly explain the access and payment requirements before the user selects the button.
+
+---
 
 ---
 
@@ -248,6 +258,18 @@ SyncYourCloud now uses “assessments” as its customer-facing term. The curren
 The homepage correctly refers to 26 assessments in two places but retains three outdated references to 25 modules. These legacy references create an inconsistent product count and naming convention.
 
 The three references to “25 modules” should be replaced with “26 assessments”.
+
+### Finding 2: PCI DSS access promise conflicts with the user journey
+
+The PCI DSS Gap Analysis landing page repeatedly states that the assessment is free and requires no sign-in. Its primary “Try It Free – No Sign-in” button instead opens a membership page that asks existing users to sign in and new users to register and pay.
+
+This prevents users from accessing the assessment under the conditions advertised on the landing page. The product owner must confirm the intended access model before the copy or routing is corrected.
+
+**Priority:** High
+
+**Affected journey:** PCI DSS Gap Analysis acquisition and onboarding
+
+**Recommended resolution:** Either provide direct anonymous access to the assessment or replace the free-access claims with accurate membership and payment information.
 
 
 
