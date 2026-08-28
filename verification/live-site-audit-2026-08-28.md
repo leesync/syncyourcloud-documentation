@@ -38,8 +38,7 @@ infrastructure identifiers.
 | SYC-003 | PCI DSS Gap Analysis route | Free PCI DSS assessment starts without sign-in | Landing page promises no-sign-in access, but the primary button opens a paid membership and sign-in page | Fail | Landing-page and membership-page screenshots captured on 28 August 2026 |
 | SYC-004 | Published product copy | Pages contain finished customer-facing content only | Internal instructions, inconsistent terminology, mismatched navigation and contradictory access claims were found | Fail — remediation in progress | Screenshots and product-code pull request #18 |
 | SYC-005 | Protected dashboard | Unauthenticated users cannot access protected content | Protected URL redirected to sign-in and exposed no dashboard data | Pass | Authentication redirect screenshot captured on 28 August 2026 |
-| SYC-006 | Public assessment | Expected public assessment can be started without authentication | Not yet tested | Pending | — |
-
+| SYC-006 | Public assessment access | Free Infrastructure Readiness Check starts without authentication | Question 1 of 21 opened in Safari Private Browsing without registration, authentication or payment | Pass | Landing-page and first-question screenshots captured on 28 August 2026 |
 ## Detailed test records
 
 ### SYC-001: Homepage assessment count
@@ -264,30 +263,34 @@ When the same protected URL was opened without an authenticated session, the app
 
 ### SYC-006: Public assessment access
 
-**URL:** Add the assessment URL tested.
+**URL:** https://www.syncyourcloud.io/tools/infra-readiness
 
 **Procedure**
 
-1. Open the assessment in a private browser window.
-2. Confirm whether authentication is required.
-3. Start the journey using fictional information.
-4. Record validation behaviour and the first successful step.
-5. Stop before submitting any information that should not enter production.
+1. Open the assessment landing page in a Safari Private Browsing window.
+2. Confirm that no authenticated session exists.
+3. Start the Infrastructure Readiness Check.
+4. Confirm that the first assessment question loads.
+5. Record whether registration, authentication or payment is required.
+6. Stop before submitting unnecessary production data.
 
 **Expected result**
 
-The documented public assessment can be started without authentication.
+The documented free Infrastructure Readiness Check can be started without authentication or payment.
 
 **Actual result**
 
-Pending manual verification.
+The public Infrastructure Readiness landing page loaded successfully in Safari Private Browsing mode.
 
-**Status:** Pending
+Starting the assessment opened question 1 of 21. The assessment did not request registration, authentication, membership activation or payment before displaying the first question.
 
-**Evidence:** Not yet captured.
+This matches the intended access model for the free public assessment.
 
-**Required action:** To be determined after testing.
+**Status:** Pass
 
+**Evidence:** Screenshots captured on 28 August 2026 show the public Infrastructure Readiness landing page and question 1 of 21 displayed without authentication.
+
+**Required action:** No immediate correction is required. Retain this test as regression evidence for future access-control or routing changes.
 ## Findings
 ### Finding 1: Outdated assessment count and terminology
 
