@@ -42,30 +42,7 @@ infrastructure identifiers.
 
 ## Detailed test records
 
-### SYC-001: Homepage tool count
-
-**URL:** https://www.syncyourcloud.io/
-
-**Procedure**
-
-1. Open the homepage in a private browser window.
-2. Search the page for every statement describing the number of tools.
-3. Record each number and the section in which it appears.
-4. Compare the statements for consistency.
-
-**Expected result**
-
-The homepage uses one accurate and consistent tool total.
-
-**Actual result**
-
-Pending manual verification.
-
-**Status:** Pending
-
-**Evidence:** Not yet captured.
-
-**Required action:** To be determined after testing.
+### SYC-001: Homepage assessment count
 
 ---
 
@@ -73,7 +50,7 @@ Pending manual verification.
 
 **URL:** https://www.syncyourcloud.io/tools/infra-readiness
 
-**Procedure**
+2. Search the page for every statement describing the number of assessments or modules.
 
 1. Open the URL in a private browser window.
 2. Record the page title and primary heading.
@@ -81,20 +58,30 @@ Pending manual verification.
 4. Compare the route name with the displayed content.
 5. Test whether the primary call-to-action opens the expected journey.
 
+
+
 **Expected result**
 
-The route displays the Infrastructure Readiness Assessment and its associated
-journey.
+The homepage consistently describes the product suite as containing 26 assessments.
 
 **Actual result**
 
-Pending manual verification.
+The homepage uses two different product totals and two different terms.
 
-**Status:** Pending
+A browser text search found:
 
-**Evidence:** Not yet captured.
+- Three references to “25 modules”.
+- Two references to “26 assessments”.
+- No references to 17.
+- No references to “tools”.
 
-**Required action:** To be determined after testing.
+“Assessments” is the current intended customer-facing term and has replaced “tools”. The references to “25 modules” are outdated copy.
+
+**Status:** Fail
+
+**Evidence:** Homepage screenshots captured on 28 August 2026 show three references to 25 modules and two references to 26 assessments.
+
+**Required action:** Replace the three outdated references to “25 modules” with “26 assessments”. Review the updated homepage to confirm that the count and terminology are consistent throughout.
 
 ---
 
