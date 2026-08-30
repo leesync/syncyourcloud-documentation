@@ -1,5 +1,5 @@
 ---
-title: Complete an Infrastructure Readiness Check
+title: # Complete an Infrastructure Readiness Check
 description: Complete the Infrastructure Readiness Check and review your Payment Sync Score.
 ---
 
