@@ -1,66 +1,96 @@
-# Complete an infrastructure readiness assessment
+---
+title: Complete an Infrastructure Readiness Check
+description: Complete the Infrastructure Readiness Check and review your Payment Sync Score.
+---
 
-This tutorial shows how to complete a SyncYourCloud infrastructure readiness assessment and interpret its result.
+# Complete an Infrastructure Readiness Check
+description: Complete the Infrastructure Readiness Check and review your Payment Sync Score.
+---
+
+# Complete your first assessment
+
+This tutorial takes you through the free **Infrastructure Readiness Check**, from the first question to the results page.
+
+You will assess one environment, view its Payment Sync Score and identify a recommendation that requires further review.
 
 ## Before you begin
 
-Prepare high-level information about the environment you want to assess, including:
+Choose one environment, product or workload. Gather high-level information about its:
 
-- cloud provider and primary region;
-- approximate transaction or workload volume;
-- key services in the architecture;
-- resilience and disaster-recovery arrangements;
-- monitoring, security and compliance controls;
-- known operational problems.
+- cloud provider and principal regions;
+- main architecture services;
+- approximate transaction or workload volumes;
+- availability and disaster-recovery arrangements;
+- monitoring, security and compliance controls; and
+- known operational constraints.
 
-Do not enter cardholder data, credentials, private keys, access tokens or production secrets.
+Do not enter cardholder or customer data, credentials, tokens, private keys, production secrets or confidential infrastructure identifiers.
 
-## 1. Open the assessment
+## 1. Open the Infrastructure Readiness Check
 
-Use either the public Infrastructure Readiness tool or the authenticated dashboard route.
+Open **Infrastructure Readiness Check** from the assessment tools. You can complete this assessment and view the result without signing in.
 
-The public route is intended for a quick assessment. The dashboard route provides the signed-in product experience and may expose additional membership features.
+The assessment contains 21 questions across seven layers:
 
-## 2. Describe the environment
+- Agent Orchestration;
+- Security & Encryption;
+- Compliance & Audit;
+- Cost Optimisation;
+- Observability & Monitoring;
+- Payment Gateway Integration; and
+- Disaster Recovery.
 
-Answer each question using the current state of the system, not the target state. If a control exists only in a document but is not enforced or tested, select the answer that reflects the implemented control.
+## 2. Confirm the scope
 
-For example, a disaster-recovery plan that has not been exercised is different from a tested failover process with measured recovery time and recovery point objectives.
+Use the same environment throughout the assessment. Complete a separate assessment for another system or workload.
 
-## 3. Submit the assessment
+## 3. Answer for the current state
 
-After the final question, submit the assessment to generate a result. The documented build calculates assessment output in the application and presents a scorecard with findings and recommendations.
+Select the answer that reflects what is implemented now—not what is planned—then select **Next**.
 
-If the configured remote assessment service is unavailable, the application can fall back to bundled assessment definitions. This fallback prevents the questionnaire from becoming unusable, but it does not prove that a remote service completed the analysis.
+For example, a documented disaster-recovery plan is different from a failover process tested against defined recovery objectives.
 
-## 4. Review the score
+If you do not know an answer, check the relevant evidence or ask the responsible engineering, security or compliance owner. Do not guess to finish the assessment.
 
-Read the overall score together with the category breakdown. A single score is a summary, not a compliance decision.
+The page displays the current question, completion percentage and number of answered questions. Select **Back** if you need to change an earlier answer.
 
-Pay particular attention to:
+## 4. Review your final answer
 
-- red or critical findings;
-- controls that are documented but not enforced;
-- resilience assumptions that have not been tested;
-- missing operational evidence;
-- recommendations that depend on facts the assessment cannot observe directly.
+Before viewing the result, confirm that:
 
-## 5. Validate the recommendations
+- every answer concerns the same environment;
+- planned controls are not recorded as implemented;
+- documented processes are distinguished from tested processes;
+- assumptions are not presented as verified facts; and
+- no sensitive information has been entered.
 
-Before acting on a recommendation:
+## 5. View the result
 
-1. Confirm that the input was accurate.
-2. Compare the finding with the live AWS configuration and internal records.
-3. Ask the responsible engineering, security or compliance owner to review it.
-4. Record accepted, rejected and deferred actions with an owner and target date.
+After answering question 21, select **View My Results**.
 
-## 6. Save or export the result
+The results page displays:
 
-Export availability depends on the tool and membership tier. When export is locked, the application sends the user to the membership page instead of generating a file.
+- the **Payment Sync Score**;
+- a summary of the number of layers at risk;
+- a **Layer Breakdown** with points, percentages and status labels; and
+- recommendations for each layer.
 
-If you use a public tool, create an account when prompted if you want to continue in the dashboard. Do not assume that a browser result has been saved unless the interface confirms it.
+Review the overall score, layer results and highest-priority recommendations. A high overall score does not cancel a serious finding in one layer.
 
-## Expected result
+Choose one recommendation to validate against the live environment. Confirm the original answer and ask the appropriate owner to review the recommendation before planning a change.
 
-You should finish with a structured decision-support artefact: a score, a set of findings and a prioritised list of actions. The result remains subject to technical and professional review.
+## 6. Keep the result
+
+To keep the result and track progress, select **Save My Results** and sign in or create an account. Viewing the initial result does not require an account.
+
+You have now completed an assessment and identified a recommendation for evidence-based review.
+
+## Next steps
+
+- [Review an Infrastructure Readiness result](../how-to/review-infrastructure-result.md)
+- [Turn recommendations into actions](../how-to/turn-recommendations-into-actions.md)
+- [Understand how assessments work](../explanations/how-assessments-work.md)
+- [Review assessment limitations](../reference/assessment-reference.md#limitations)
+
+
 
