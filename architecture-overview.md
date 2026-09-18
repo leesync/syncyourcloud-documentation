@@ -63,5 +63,5 @@ Self-service membership actions open hosted Stripe Payment Links. SyncYourCloud 
 
 ## Current limitations
 
-See [Known limitations](../reference/known-limitations.md) before describing the system in a portfolio, CV or application.
+See [Known limitations](reference/known-limitations.md) before describing the system in a portfolio, CV or application.
 

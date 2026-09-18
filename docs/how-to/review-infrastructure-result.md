@@ -136,4 +136,4 @@ You should finish with:
 
 - [Turn recommendations into actions](turn-recommendations-into-actions.md)
 - [Understand how assessments work](../explanations/how-assessments-work.md)
-- [Review assessment limitations](../reference/assessment-reference.md#limitations)
+- [Review assessment limitations](../reference/known-limitations.md)

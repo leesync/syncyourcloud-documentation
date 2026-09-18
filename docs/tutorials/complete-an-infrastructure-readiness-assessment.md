@@ -125,4 +125,4 @@ The assessment provides decision support. It does not certify compliance or repl
 - [Review an Infrastructure Readiness result](../how-to/review-infrastructure-result.md)
 - [Turn recommendations into actions](../how-to/turn-recommendations-into-actions.md)
 - [Understand how assessments work](../explanations/how-assessments-work.md)
-- [Review assessment limitations](../reference/assessment-reference.md#limitations)
+- [Review assessment limitations](../reference/known-limitations.md)
