@@ -151,10 +151,10 @@ An assessment does not:
 - guarantee security, resilience or availability; or
 - replace an authorised technical, security or compliance review.
 
-For the complete list, see [Assessment reference](../reference/assessment-reference.md#limitations).
+For the complete list, see [Assessment reference](../reference/known-limitations.md).
 
 ## Related guides
 
-- [Complete your first assessment](../tutorials/complete-your-first-assessment.md)
+- [Complete your first assessment](../tutorials/complete-an-infrastructure-readiness-assessment.md)
 - [Review an Infrastructure Readiness result](../how-to/review-infrastructure-result.md)
 - [Turn recommendations into actions](../how-to/turn-recommendations-into-actions.md)

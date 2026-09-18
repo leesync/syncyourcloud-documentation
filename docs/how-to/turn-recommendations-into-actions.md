@@ -174,4 +174,4 @@ You should finish with a prioritised action that has:
 
 - [Review an Infrastructure Readiness result](review-infrastructure-result.md)
 - [Understand how assessments work](../explanations/how-assessments-work.md)
-- [Review assessment limitations](../reference/assessment-reference.md#limitations)
+- [Review assessment limitations](../reference/known-limitations.md)
