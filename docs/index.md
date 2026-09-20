@@ -57,6 +57,7 @@ These outputs support analysis and planning. They do not deploy infrastructure, 
 ## Next steps
 
 - New user: [Complete an infrastructure readiness assessment](tutorials/complete-an-infrastructure-readiness-assessment.md)
+- Returning user: [Choose and complete the right assessment](how-to/choose-and-complete-a-syncyourcloud-assessment.md)
 - Developer or reviewer: [Read the architecture overview](explanations/architecture-overview.md)
 - Support or operations: [Troubleshoot common issues](how-to/troubleshoot-common-issues.md)
 
