@@ -17,6 +17,7 @@ This repository demonstrates a docs-as-code workflow covering product documentat
 
 - [Platform overview](docs/index.md)
 - [Complete an Infrastructure Readiness assessment](docs/tutorials/complete-an-infrastructure-readiness-assessment.md)
+- [Choose and complete a SyncYourCloud assessment](docs/how-to/choose-and-complete-a-syncyourcloud-assessment.md)
 - [Architecture overview](docs/explanations/architecture-overview.md)
 - [Authentication and access](docs/explanations/authentication-and-access.md)
 - [Payment tools reference](docs/reference/payment-tools.md)
